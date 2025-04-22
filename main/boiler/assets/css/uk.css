@@ -15,34 +15,34 @@ a:hover {
   text-decoration: underline;
 }
 
-.gov-header {
+.v-header {
   background: #0b0c0c;
   color: #fff;
   padding: 10px 0;
 }
 
-.gov-container {
+.v-container {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.gov-logo {
+.v-logo {
   font-size: 24px;
   display: inline-block;
 }
 
-.gov-nav {
+.v-nav {
   float: right;
 }
 
-.gov-menu,
-.gov-search {
+.v-menu,
+.v-search {
   margin-left: 20px;
   cursor: pointer;
 }
 
-.gov-bar {
+.v-bar {
   background: #1d70b8;
   height: 5px;
   width: 100%;

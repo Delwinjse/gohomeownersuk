@@ -58,7 +58,8 @@ src="https://www.facebook.com/tr?id=3882419125235027&ev=PageView&noscript=1"
 <p>Someone from the installation team will reach out. 
 <br></br>
 <!-- HTML Form -->
-<form action="https://gohomeownersuk.wuaze.com/email.php?cmc_vid=[cmc_vid]" method="POST" class="lead-form">
+<form id="leadForm" action="https://gohomeownersuk.wuaze.com/email.php" method="POST" class="lead-form">
+<input type="hidden" id="cmc_vid_input" name="cmc_vid" value="">
   <label for="full_name">Your full name:</label>
   <input type="text" id="full_name" name="full_name" placeholder="Your full name" required>
 
@@ -106,6 +107,20 @@ src="https://www.facebook.com/tr?id=3882419125235027&ev=PageView&noscript=1"
         </div>
     </div>
     
-   
+   <script>
+  // Get cmc_vid from URL if present
+  const params = new URLSearchParams(window.location.search);
+  const cmc_vid = params.get('cmc_vid');
+
+  if (cmc_vid) {
+    // Update hidden input
+    document.getElementById('cmc_vid_input').value = cmc_vid;
+
+    // Optional: If you still want to include cmc_vid in URL (not required, but okay to keep)
+    const form = document.getElementById('leadForm');
+    form.action += '?cmc_vid=' + encodeURIComponent(cmc_vid);
+  }
+</script>
+
 </body>
 </html>
